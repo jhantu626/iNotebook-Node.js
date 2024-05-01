@@ -1,0 +1,8 @@
+{
+    "editor.quickSuggestionsDelay": 0,
+    "editor.quickSuggestions": {
+        "other": "inline"
+    },
+    "editor.suggest.selectionMode": "whenTriggerCharacter",
+    "editor.suggest.snippetsPreventQuickSuggestions": false
+}
