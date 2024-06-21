@@ -10,6 +10,7 @@ const fetchuser=async(req,resp,next)=>{
         }
         
         const data=jwt.verify(token,process.env.JWT_SECRET);
+        console.log(data)
         req.user=data.user;
         next();
    }catch(err){
