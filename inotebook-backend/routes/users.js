@@ -1,10 +1,11 @@
 const express=require('express')
 const router=express.Router();
+const fetchuser=require('./../middleware/fetchuser')
 
 const User=require('./../models/User')
 
 //getUsers
-router.get('/',async (req,resp)=>{
+router.get('/',fetchuser,async (req,resp)=>{
     try{
         const data=await User.find();
         resp.json(data).status(200);
@@ -14,7 +15,7 @@ router.get('/',async (req,resp)=>{
     }
 })
 
-router.get('/:id',async (req,resp)=>{
+router.get('/:id',fetchuser,async (req,resp)=>{
     try{
         const id=req.params.id;
         const data=await User.findById(id);
